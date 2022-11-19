@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
-
 import store from '../../store'
 import {activeFilterChanged, fetchFilters, selectAll} from '../heroesFilters/heroesFiltersSlice'
 import Spinner from '../spinner/Spinner';
@@ -14,7 +13,6 @@ const HeroesFilters = () => {
    
     useEffect(() => {
         dispatch(fetchFilters());
-    
         // eslint-disable-next-line
     }, []);
 
@@ -45,7 +43,6 @@ const HeroesFilters = () => {
     }
 
     const elements = renderFilters(filters);
-
     return (
         <div className="card shadow-lg mt-4">
             <div className="card-body">
